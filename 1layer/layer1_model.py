@@ -30,3 +30,20 @@ def load_training_data(file_name):
 print("Loading training data")
 X_train, y_train = load_training_data(train_file)
 print("Loaded training data")
+
+model = Sequential()
+model.add(Conv2D(filters=16, kernel_size=3, padding='same', activation='relu', input_shape=(image_size, image_size, 1)))
+model.add(MaxPooling2D(pool_size=2))
+model.add(GlobalAveragePooling2D())
+model.add(Dense(500, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+model.summary()
+model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+
+model_json = model.to_json()
+with open(model_file, 'w') as json_file:
+    json_file.write(model_json)
+
+checkpointer = ModelCheckpoint(filepath=model_weights_file, verbose=1, save_best_only=True)
+stopper = EarlyStopping(monitor='val_loss', min_delta=1e-4, patience=10, verbose=1, mode='auto')
+hist = model.fit(X_train, y_train, batch_size=32, epochs=1000, validation_split=0.2, callbacks=[checkpointer, stopper], verbose=1, shuffle=True)
