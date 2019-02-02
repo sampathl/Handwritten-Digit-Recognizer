@@ -7,4 +7,11 @@ Epoch 124/1000
 Epoch 00124: val_loss did not improve from 0.54279
 Epoch 00124: early stopping
 
+layer_2_conv.model:
 
+Epoch 00044: val_loss did not improve from 0.08456
+Epoch 45/1000
+33600/33600 [==============================] - 38s 1ms/step - loss: 0.0555 - acc: 0.9821 - val_loss: 0.0854 - val_acc: 0.9756
+
+Epoch 00045: val_loss did not improve from 0.08456
+Epoch 00045: early stopping
