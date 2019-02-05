@@ -15,3 +15,10 @@ Epoch 45/1000
 
 Epoch 00045: val_loss did not improve from 0.08456
 Epoch 00045: early stopping
+
+Epoch 00042: val_loss did not improve from 0.03400
+Epoch 43/1000
+33600/33600 [==============================] - 58s 2ms/step - loss: 0.0477 - acc: 0.9870 - val_loss: 0.0416 - val_acc: 0.9898
+
+Epoch 00043: val_loss did not improve from 0.03400
+Epoch 00043: early stopping
