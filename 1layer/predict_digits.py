@@ -35,3 +35,6 @@ with open(output_file, 'w') as f:
         prediction = np.argmax(y_hat)
         f.write(str(index+1)+','+str(prediction)+'\n')
 f.close()
+
+
+""" Reference :https://github.com/arunkv/kaggle-digit-recognizer/tree/master/script"""

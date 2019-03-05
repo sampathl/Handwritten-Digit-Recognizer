@@ -50,3 +50,6 @@ with open(model_file, 'w') as json_file:
 checkpointer = ModelCheckpoint(filepath=model_weights_file, verbose=1, save_best_only=True)
 stopper = EarlyStopping(monitor='val_loss', min_delta=1e-4, patience=10, verbose=1, mode='auto')
 hist = model.fit(X_train, y_train, batch_size=32, epochs=1000, validation_split=0.2, callbacks=[checkpointer, stopper], verbose=1, shuffle=True)
+
+
+""" Reference :https://github.com/arunkv/kaggle-digit-recognizer/tree/master/script"""
