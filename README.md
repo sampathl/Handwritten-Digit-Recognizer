@@ -5,4 +5,4 @@ The data can be obtained at "https://www.kaggle.com/c/digit-recognizer/data" and
 
 
 # Reference
-https://github.com/arunkv/kaggle-digit-recognizer/tree/master/script
+https://github.com/arunkv
